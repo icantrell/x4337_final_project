@@ -120,7 +120,7 @@ if remake:
     save_file('page_titles.dat',page_titles)
 
     #get page url for search loop. Should've made one call to DB.
-    print('getting page urls...(don\'t ask)')
+    print('getting page urls...')
     page_urls = list(storage.read_pages_url())
     save_file('page_urls.dat',page_urls) 
 
@@ -201,7 +201,7 @@ page_urls = load_file('page_urls.dat')
 
 if use_tfidf:
     #if in TF-IDF mode. Don't use LSI data for searching but only raw TF-IDF data. For comparison purposes.
-    tfidf_matrix = load_file('tfidf_matrix')
+    tfidf_matrix = load_file('tfidf_matrix.dat')
     open_search(tfidf.transform, 'tfidf matrix', tfidf_matrix,page_titles,page_urls)
 
 #get the words that were closests to principle components. To find the biggest topics.
