@@ -6,10 +6,12 @@ The data I have on Github only has ~50 websites due to Github limit. The one in 
 1.(optional)to run the web crawler run<br>
 python web_crawler.py
 
-It only crawls english Wikipedia and it is single threaded. 
+It only crawls english Wikipedia and it is single threaded and will collect webpages and store them in db/webpages.db. 
 
 2.(optional)to process the collected data run<br>
 python lsi.py <number of principal components to create> 1 0 db/webpages.db english_words_20k.txt
+
+uses data from db/webpages.db and dictionary from english_words_20k.txt
 
 3.to run LSI search engine run<br>
 python lsi.py <number of principal components to use> 0 0
