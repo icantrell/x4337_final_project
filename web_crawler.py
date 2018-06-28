@@ -153,7 +153,7 @@ class RequestManager(threading.Thread):
         self._stop_event.set()
 
 class Storage(threading.Thread):
-    def __init__(self, processed=Queue(), unprocessed=Queue(), logfile='storage.log',dbfile = '../db/webpages.db', non_english = False):
+    def __init__(self, processed=Queue(), unprocessed=Queue(), logfile='storage.log',dbfile = 'db/webpages.db', non_english = False):
         super(Storage, self).__init__()
         self.conn = sqlite3.connect(dbfile, check_same_thread = False)
         self.conn.row_factory = sqlite3.Row
