@@ -154,8 +154,8 @@ if remake:
     #save page titles to meta data file.
     save_file('events/metadata.tsv','Title\n' + '\n'.join(page_titles),False)
     print('Now run command...')
-    print('\n~~~~~~~~~~~~~\npython lsi.py 0 0 to see LSI based search.')
-    print('python lsi.py 0 1 to see TF-IDF based search.\n~~~~~~~~~~~~\n')
+    print('\n~~~~~~~~~~~~~\npython lsi.py <#principal vectors> 0 0 \nto see LSI based search.')
+    print('python lsi.py <#principal vectors> 0 1 \nto see TF-IDF based search.\n~~~~~~~~~~~~\n')
 
     print('making tensorbaord data...')
     #make tensorboard embedding visual.
