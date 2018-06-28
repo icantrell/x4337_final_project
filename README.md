@@ -16,6 +16,7 @@ uses data from db/webpages.db and dictionary from english_words_20k.txt
 3.to run LSI search engine run<br>
 python lsi.py <number of principal components to use> 0 0
 
+NOTE:<b> I used 50 principal components. So you can use between 1-50.</b>
 the # of principal components has a different purpose here. It will decide how many to actaully use for comparison and can be raised or increased later with minimal re-processing.
 
 4.(optional)to run raw TF-IDF search engine run<br>
